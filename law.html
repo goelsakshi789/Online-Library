@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LAW</title>
+	<style type="text/css">
+	*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+</*-------------------*/>
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+</* --------------------*/>
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+  margin-top: 70px;
+}
+a{
+  text-decoration: none;
+  color: #555;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body{
+  background-image: url("");
+}
+.row{
+  display: flex;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50;
+    transition: transform 0.5s;
+}
+.col-4 img{
+  width: 80%;
+}
+.title{
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px
+  color: #555;
+}
+.title::after{
+  content: '';
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h4{
+  color: #555;
+  font-weight: normal;
+}
+.col-4 p{
+  font-size: 14px;
+}
+.rating .fa{
+  color: #ff523b;
+}
+.col-4:hover{
+  transform: translateY(-5%);
+}
+.button{
+  padding: 8px 16px;
+  background-color: #f1f1f1f1
+  border-radius: 50%;
+  color: #ff523b;
+
+}
+
+/*---- button---*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2{
+  background-color: orange;
+  color: black;
+}
+
+.button2:hover{
+  background-color: yellow;
+  color: black;
+}
+
+/*-----footer-----*/
+
+.footer{
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color: #8a8a8a;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+flex-basis: 12%;
+text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.app-logo{
+  margin-top: 20px;
+}
+.app-logo img{
+  width: 140px;
+}
+.footer hr{
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<!------- Slider -------->
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/36_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/13_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/1_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4/ 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/14_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/13_inr.jpg" style="width:100%">
+  </div>
+</div>
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<br>
+<br>
+
+<!------LAW ------>
+<div class="small-container">
+    <h2 class="title">LAW</h2>
+    <div class="row">
+      <div class="col-4">
+
+        <!------ Row 1 ------>
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/493/9780199490493.jpg">
+        <h4><b>Justice Versus Judiciary</b></h4>
+         <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Justice%20Versus%20Judiciary.law.html">  Add to Cart</a></button>
+      </div>
+      <div class="col-4">
+      <img src="https://minhajbooks.com/images-books/thumbnails600/Islamic-Concept-of-Law-Dr-Tahir-ul-Qadri_267.jpg">
+        <h4><b>Islamic concept of law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$40.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Islamic%20concept%20of%20law.law.html">Add to Cart</a></button>
+      </div>
+    
+    <div class="col-4">
+    <img src="https://www.oxfordscholastica.com/wp-content/uploads/2019/01/AboutLaw-e1548176433656.jpg">
+    <h4><b>About law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$13.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/About%20law.law.html"> Add to Cart</a></button>
+      </div>
+
+    <div class="col-4">
+    <img src="https://i.pinimg.com/236x/46/2e/78/462e78e091644897a87eb94455bf9bb0.jpg">
+     <h4><b>An introduction to legal reasoning</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$25.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/An%20introduction%20to%20legal%20reasoning.law.html "> Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/41Zt6poP0EL._SX352_BO1,204,203,200_.jpg">
+    <h4><b>Domestic Violence(Law and Practice)</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Domestic%20Violence(Law%20and%20Practice).law.html"> Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+    <img src="https://i.pinimg.com/236x/d0/61/77/d0617758403736afca252c17e0a8ed3c.jpg">
+    <h4><b>Storming the Court</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Storming%20the%20Court.law.html">Add to Cart</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!------ Row 2 -------->
+  <div class="small-container">
+    <h2 class="title">Latest Editions</h2>
+    <div class="row">
+      <div class="col-4">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51A5J1%2BOZGL.jpg">
+      <h4><b>International Law Frameworks</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$35.00</b></p><br>
+        <button class="button button2"><a href=" 
+http://mahima.freevar.com/International%20Law%20Frameworks.law.html"> Add to Cart</a></button>
+      </div>
+      <div class="col-4">
+      <img src="https://m.media-amazon.com/images/I/51CwHMwQYQL.jpg">
+      <h4><b>The Law of Attraction</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/The%20Law%20of%20Attraction.law.html"> Add to Cart</a></button>
+      </div>
+    
+    <div class="col-4">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/71uxhIXv2SL.jpg">
+    <h4><b>Law of Wills</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$24.00</b></p><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Law%20of%20Wills.law.html"> Add to Cart</a></button>
+      </div>
+
+    <div class="col-4">
+    <img src="https://media.bloomsbury.com/rep/bj/9781847317681.jpg">
+    <h4><b>International environmental Law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/International%20environmental%20Law.law.html">Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+    <img src="https://www.oxfordscholastica.com/wp-content/uploads/2019/01/LettersToALawStudent-e1548176296756.jpg">
+    <h4><b>Letters to a law student</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$39.00</b></p><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Letters%20to%20a%20law%20student.law.html"> Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+    <img src="https://m.media-amazon.com/images/I/41hbQRm2aWL.jpg">
+     <h4><b>International Law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/International%20Law.law.html">  Add to Cart</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!------- Row 3 ------>
+   <div class="small-container">
+    <h2 class="title">Bestsellers</h2>
+    <div class="row">
+      <div class="col-4">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/41y2n-TSHsL.jpg">
+       <h4><b>Public International Law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Public%20International%20Law.law.html"> Add to Cart</a></button>
+      </div>
+      <div class="col-4">
+      <img src="https://lexisnexis.in/image/cache/catalog/administrative-law/9788131253663-290x405.jpg">
+       <h4><b>Cyber Law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Cyber%20Law.law.html"> Add to Cart</a></button>
+      </div>
+    
+    <div class="col-4">
+    <img src="https://m.media-amazon.com/images/I/51StARxlL9L._SL500_.jpg">
+     <h4><b>From Law school to Lawyer</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$20.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/From%20Law%20school%20to%20Lawyer.law.html">Add to Cart</a></button>
+      </div>
+
+    <div class="col-4">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/71ZQ2gCbm0L.jpg">
+     <h4><b>Land Laws</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Land%20Laws.law.html"> Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+    <img src="https://www.abajournal.com/images/gallery/30lawyers30books/black_roy.jpg">
+     <h4><b>My life in Court</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/My%20life%20in%20Court.law.html">Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+    <img src="https://www.e-elgar.com/shop/media/catalog/product/cache/01c740ac49768798d3ac9bd0cdac340f/9/7/9781786438546.jpg">
+     <h4><b>International Humanitarian Law</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br><br>
+        <button class="button button2"><a href=" http://mahima.freevar.com/International%20Humanitarian%20Law.law.html">Add to Cart</a></button>
+        </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!------- About ------->
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Download Our App</h3>
+        <p>Download App for Android and ios mobile phone</p>
+        <div class="app-logo">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.FO14dLY7C6lzS0fn3S8P8gHaCM&pid=Api&P=0&w=525&h=157">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.1Ft7RF7Gqkeb6d2fK2J8lAHaCM&pid=Api&P=0&w=558&h=166">
+      </div>
+    </div>
+      <div class="footer-col-2">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.8RS1JgScLYPTBDMddhooWAHaF7&pid=Api&P=0&w=232&h=187">
+        <p>Our Purpose Is to Sustainably Make the Pleasure and Benefits of Books Accessible to the many</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Coupons</li>
+          <li>Blog Post</li>
+          <li>Return Policy</li>
+          <li>Join Affiliate</li>
+        </ul>
+      </div>
+      <div class="footer-col-1">
+        <h3>Follow Us</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+          <li>YouTube</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2021 - Easy Tutorial</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

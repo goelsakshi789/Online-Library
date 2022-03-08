@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Book store</title>
+ <style type="text/css">
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+</*-------------------*/>
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+</* --------------------*/>
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+  margin-top: 70px;
+}
+a{
+  text-decoration: none;
+  color: #555;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body{
+  background-image: url("");
+}
+.row{
+  display: flex;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50;
+    transition: transform 0.5s;
+}
+.col-4 img{
+  width: 80%;
+}
+.title{
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px
+  color: #555;
+}
+.title::after{
+  content: '';
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h4{
+  color: #555;
+  font-weight: normal;
+}
+.col-4 p{
+  font-size: 14px;
+}
+.rating .fa{
+  color: #ff523b;
+}
+.col-4:hover{
+  transform: translateY(-5%);
+}
+.button{
+  padding: 8px 16px;
+  background-color: #f1f1f1f1
+  border-radius: 50%;
+  color: #ff523b;
+
+}
+
+/*offer*/
+
+.offer{
+  background: radial-gradient(#fff,#ee4466);
+  margin-top: 80px;
+  padding: 30px 0;  
+}
+.col-2 .offer-img{
+  padding: 50px;
+}
+small{
+  color:  #555;
+}
+
+/*---- button---*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: green; 
+  color: black; 
+  border-radius: 50px;
+}
+
+.button1:hover {
+  background-color: red;
+  color: black;
+}
+
+.button2{
+  background-color: orange;
+  color: black;
+}
+
+.button2:hover{
+  background-color: yellow;
+  color: black;
+}
+
+/*-----testimonial---*/
+
+.col-3{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50;
+    transition: transform 0.5s;
+}
+.col-3:hover{
+  transform: translateY(-5%);
+}
+
+.testimonial{
+  padding-top: 100px;
+}
+.testimonial .col-3{
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+  width: 50px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+.testimonial .col-3:hover{
+  transform: translateY(-10px);
+}
+.fa .fa-quote-left{
+  font-size: 34px;
+  color: #ff523b;
+}
+.col-3 p{
+  font-size: 12px;
+  margin: 12px 0;
+  color: #777;
+}
+.testimonial .col-3 h3{
+  font-weight: 600;
+  color: #555;
+  font-size: 16px;
+}
+
+/*-----footer-----*/
+.footer{
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color: #8a8a8a;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+flex-basis: 12%;
+text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.app-logo{
+  margin-top: 20px;
+}
+.app-logo img{
+  width: 140px;
+}
+.footer hr{
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+  <!-----Slider----->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/36_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/13_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/1_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4/ 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/14_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/13_inr.jpg" style="width:100%">
+  </div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<br>
+<br>
+
+  <!----New Arrivals--->
+
+  <div class="small-container">
+    <h2 class="title">New Arrivals</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="https://tse4.explicit.bing.net/th?id=OIP.xIHICOrmsadhXNPlNNIhdwHaLG&pid=Api&P=0&w=300&h=300">
+        <h4><b>Girl Gone Mad</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://mayank.freeoda.com/Girl%20Gone%20Mad.html">Buy Now</a></button>
+      </div>
+      <div class="col-4">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.9vMpkYlhai4QI0fjvhT9lgHaLK&pid=Api&P=0&w=300&h=300">
+        <h4><b>Sully</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href="http://mayank.freeoda.com/Sully.html">Buy Now</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/204/9780062932204.jpg">
+        <h4><b>The Uncommon Cold</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$20.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Theuncommoncold.html">Buy Now</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.ADOOi8Si1dfoTMlzHNb37wHaLU&pid=Api&P=0&w=300&h=300">
+        <h4><b>We Are Voulhire</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br><br>
+        <button class="button button2"><a href="http://mayank.freeoda.com/We%20Are%20Voulhire.html">Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.6REhrzCwJby-_VDNTi0GzQHaLb&pid=Api&P=0&w=300&h=300">
+        <h4><b>The Inscrutable Americans</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="http://mayank.freeoda.com/The%20Inscrutable%20Americans.html">Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://i.pinimg.com/originals/7b/25/50/7b25505a788a3ac84083f318169bb173.jpg">
+        <h4><b>Diaries Of Adam And Eve</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br><br>
+        <button class="button button2"><a href="http://mayank.freeoda.com/Diaries%20Of%20Adam%20And%20Eve.html">Buy Now</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!----- Biography---->
+
+  <div class="small-container">
+    <h2 class="title">Biography</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.pWW9BsQgkCRL8r8aAc6zfgAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>Elon Musk</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$20.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/ElonMusk.html">Buy Now</a></button>
+      </div>
+     
+      <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.WVGNtkbR7Wtt43UgCh9d0wAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>The Biography of Benjamin Franklin</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/TheBiographyofBenjaminFranklin.html">Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.EWIZ8DETP4GvLQ3AY0p26AHaLY&pid=Api&P=0&w=300&h=300">
+        <h4><b>Losing My Virginity</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Losingmyvirginity.html">Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.d81ZanUjwE37Gyr_3-OJXAAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>Steve Jobs Biography</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Stevejobsbiography.html">Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.dpHvIOWdnNxQI9inxYCQUQAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>Fredrick Douglas Biography</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Fredrickdouglasbiography.html">Buy Now</a></button>
+      </div>
+      
+      <div class="col-4">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.ttC5gm5pgqFENKWudPUa1AHaLc&pid=Api&P=0&w=300&h=300">
+        <h4><b>Mohandas K. Gandhi Autobiography</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/mohandaskgandhi.html">Buy Now</a></button>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+
+<!---- offer ----->
+
+<div class="offer">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-2">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.Xo3m29kK40KzIZjpA9EXrgHaCf&pid=Api&P=0&w=490&h=166" class="offer-img">
+      </div>
+        <div class="col-4">
+          <p>Exclusively available on Online Bookstore</p>
+          <h1>Discounted Books</h1>
+          <small>Thriller,Horror,Romantic and all other Genres<br><br></small>
+          
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<!-----Fiction----->
+
+<div class="small-container">
+    <h2 class="title">Fiction</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.L-8n1wx1df66OuTh6Tll9gHaKs&pid=Api&P=0&w=300&h=300">
+        <h4><b>The Voyage of the space Beagle</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$20.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Thevoyageofthespacebeagle.html">Buy Now</a></button>
+      </div>
+     
+      <div class="col-4">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.SdzI8njJg7YqiJQi6b1NHAHaLQ&pid=Api&P=0&w=300&h=300">
+        <h4><b>Child of a mad god</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Childofamadgod.html">Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.3oOaIcS1_6FY9JHDP30QHQHaLL&pid=Api&P=0&w=300&h=300">
+        <h4><b>Fire dance</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Firedance.html">Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.XsSQziFnoxR_iVGB4GWlygHaLX&pid=Api&P=0&w=300&h=300">
+        <h4><b>The calculating stars</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Thecalculatingstars.html">Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.SkVeZRKxGFsSl_FIgiv9ggHaLN&pid=Api&P=0&w=300&h=300">
+        <h4><b>Daughter of the storm</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Daughtersofthestorm.html">Buy Now</a></button>
+      </div>
+      
+      <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.cgtGzYC6MxNzBDbki7YBggHaLI&pid=Api&P=0&w=300&h=300">
+        <h4><b>All light we cannot see</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://ourstore.freetzi.com/Allthelightwecannotsee.html">Buy Now</a></button>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<!------ testimonial ----->
+
+<div class="testimonial">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-3">
+        <div class="rating">
+        <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <h3>There are many little ways to enlarge your child’s world. Love of books is the best of all.<br>– Jacqueline Kennedy Onassis</h3>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.G3rP9zh4HU-tWme3PGUoeQAAAA&pid=Api&P=0&w=300&h=300">
+      </div>
+    
+      <div class="col-3">
+        <div class="rating">
+        <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <h3>If we encounter a man of rare intellect, we should ask him what books he reads.<br>– Ralph Waldo Emerson</h3>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.dbFVDt47Ci-TwNNi74U3kAHaLH&pid=Api&P=0&w=300&h=300">  
+      </div>
+
+      <div class="col-3">
+        <div class="rating">
+        <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <h3>Reading gives us someplace to go when we have to stay where we are.<br>– Mason Cooley</h3>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.J10rrgi0i1g3qL9kL55hYgHaI3&pid=Api&P=0&w=300&h=300">
+      </div>
+
+      <div class="col-3">
+        <div class="rating">
+        <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <h3>Always read something that will make you look good if you die in the middle of it.<br>– P.J. O’Rourke</h3>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.iIs2JYBpIGNLbWkV26JsEQHaJ4&pid=Api&P=0&w=300&h=300">
+        <h3></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----footer---->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Download Our App</h3>
+        <p>Download App for Android and ios mobile phone</p>
+        <div class="app-logo">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.FO14dLY7C6lzS0fn3S8P8gHaCM&pid=Api&P=0&w=525&h=157">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.1Ft7RF7Gqkeb6d2fK2J8lAHaCM&pid=Api&P=0&w=558&h=166">
+      </div>
+    </div>
+      <div class="footer-col-2">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.8RS1JgScLYPTBDMddhooWAHaF7&pid=Api&P=0&w=232&h=187">
+        <p>Our Purpose Is to Sustainably Make the Pleasure and Benefits of Books Accessible to the many</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Coupons</li>
+          <li>Blog Post</li>
+          <li>Return Policy</li>
+          <li>Join Affiliate</li>
+        </ul>
+      </div>
+      <div class="footer-col-1">
+        <h3>Follow Us</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+          <li>YouTube</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2021 - Easy Tutorial</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+

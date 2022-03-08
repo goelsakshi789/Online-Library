@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sports</title>
+  <style type="text/css">
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+</*-------------------*/>
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+</* --------------------*/>
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+  margin-top: 70px;
+}
+a{
+  text-decoration: none;
+  color: #555;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body{
+  background-image: url("");
+}
+.row{
+  display: flex;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50;
+    transition: transform 0.5s;
+}
+.col-4 img{
+  width: 80%;
+}
+.title{
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px
+  color: #555;
+}
+.title::after{
+  content: '';
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h4{
+  color: #555;
+  font-weight: normal;
+}
+.col-4 p{
+  font-size: 14px;
+}
+.rating .fa{
+  color: #ff523b;
+}
+.col-4:hover{
+  transform: translateY(-5%);
+}
+.button{
+  padding: 8px 16px;
+  background-color: #f1f1f1f1
+  border-radius: 50%;
+  color: #ff523b;
+
+}
+
+/*---- button---*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2{
+  background-color: orange;
+  color: black;
+}
+
+.button2:hover{
+  background-color: yellow;
+  color: black;
+}
+
+/*-----footer-----*/
+
+.footer{
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color: #8a8a8a;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+flex-basis: 12%;
+text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.app-logo{
+  margin-top: 20px;
+}
+.app-logo img{
+  width: 140px;
+}
+.footer hr{
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+	
+	<!------- Slider -------->
+
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/36_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/13_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/1_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4/ 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/14_inr.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/13_inr.jpg" style="width:100%">
+  </div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<br>
+<br>
+
+<!------Body, Mind & Spirit ------>
+
+<div class="small-container">
+    <h2 class="title">Sports</h2>
+    <div class="row">
+      <div class="col-4">
+
+      	<!------ Row 1 ------>
+
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/410/9781108494410.jpg">
+        <h4><b>(Hi)Stories of Desire</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/(Hi)Stories%20of%20Desire.sports.html"> Add to Cart</a></button>
+      </div>
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/956/9788193926956.jpg">
+        <h4><b>Displacement and Citizenship</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$40.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Displacement%20and%20Citizenship.sports.html">Add to Cart</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/956/9781472947956.jpg">
+        <h4><b>Running Up That Hill</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$13.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Running%20Up%20That%20Hill.sports.html">
+                Add to Cart</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/457/9781985836457.jpg">
+        <h4><b>Intermission</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$25.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Intermission.sports.html"> Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/374/9781471175374.jpg">
+        <h4><b>Tiger Woods</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Tiger%20Woods.sports.html">Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/823/9781937715823.jpg">
+        <h4><b>The Cyclist's Training Bible</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/The%20Cyclist's%20Training%20Bible.sports.html"> Add to Cart</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!------ Row 2 -------->
+
+  <div class="small-container">
+    <h2 class="title">Latest Editions</h2>
+    <div class="row">
+    	<div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/649/9780008236649.jpg">
+        <h4><b>Soccernomics</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$35.00</b></p><br>
+        <button class="button button2"><a href=" 
+http://mahima.freevar.com/Soccernomics.sports.html">Add to Cart</a></button>
+      </div>
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/337/9781786069337.jpg">
+        <h4><b>Zidane</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Zidane.sports.html"> Add to Cart</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.Ztqp-WfGw6Yc52ntK1dWKAAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>Game Seven</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$24.00</b></p><br><br>
+        <button class="button button2"><a href=" http://mahima.freevar.com/Game%20Seven.sports.html">   Add to Cart</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/488/9781785038488.jpg">
+        <h4><b>Zidane</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br>
+        <button class="button button2"><a href=" http://mahima.freevar.com/Zidane1.sports.html">Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.pbmjoYPisSFrrbmgUaFaFQAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>Hockey Holidays</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Hockey%20Holidays.sports.html"> Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.TJOyZxsD1TjIoD8xkxkZawHaLF&pid=Api&P=0&w=300&h=300">
+        <h4><b>Eyes on the Goal</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$21.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Eyes%20on%20the%20Goal.sports.html"> Add to Cart</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!------- Row 3 ------>
+
+  <div class="small-container">
+    <h2 class="title">Bestsellers</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.gC-jUfoYqtNRJW7rkipbEwAAAA&pid=Api&P=0&w=300&h=300">
+        <h4><b>The Champion's Mind</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$52.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/The%20Champion's%20Mind.sports.html">
+                   Add to Cart</a></button>
+      </div>
+      <div class="col-4">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.cExM-QELgb-vLzDjQMpYcAHaLX&pid=Api&P=0&w=300&h=300">
+        <h4><b>Sports Comics</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Sports%20Comics.sports.html">Add to Cart</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.G-XY-rpNXhP-BtFfNeazdwHaLj&pid=Api&P=0&w=300&h=300">
+        <h4><b>Sports Legends</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$20.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Sports%20Legends.sports.html"> Add to Cart</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.99vbOwRusdheAUySuASe5AHaLb&pid=Api&P=0&w=300&h=300">
+        <h4><b>Strange Sports Stories</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Strange%20Sports%20Stories.sports.html">  Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.QrIiZGR66wGKWFs6qeTtsAHaLQ&pid=Api&P=0&w=300&h=300">
+        <h4><b>Bat + Ball</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$20.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Bat%20+%20Ball.sports.html">  Add to Cart</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.xgt5tg-l43GxW8Yw6pRnBAHaLG&pid=Api&P=0&w=300&h=300">
+        <h4><b>About Sports & Life Lessons</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$12.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/About%20Sports%20&%20Life%20Lessons.sports.html"> Add to Cart</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!------- About ------->
+
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Download Our App</h3>
+        <p>Download App for Android and ios mobile phone</p>
+        <div class="app-logo">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.FO14dLY7C6lzS0fn3S8P8gHaCM&pid=Api&P=0&w=525&h=157">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.1Ft7RF7Gqkeb6d2fK2J8lAHaCM&pid=Api&P=0&w=558&h=166">
+      </div>
+    </div>
+      <div class="footer-col-2">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.8RS1JgScLYPTBDMddhooWAHaF7&pid=Api&P=0&w=232&h=187">
+        <p>Our Purpose Is to Sustainably Make the Pleasure and Benefits of Books Accessible to the many</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Coupons</li>
+          <li>Blog Post</li>
+          <li>Return Policy</li>
+          <li>Join Affiliate</li>
+        </ul>
+      </div>
+      <div class="footer-col-1">
+        <h3>Follow Us</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+          <li>YouTube</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2021 - Easy Tutorial</p>
+  </div>
+</div>
+
+</body>
+</html>

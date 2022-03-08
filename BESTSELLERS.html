@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bestsellers</title>
+	  <style type="text/css">
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+  margin-top: 70px;
+}
+a{
+  text-decoration: none;
+  color: #555;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body{
+  background-image: url("");
+}
+.row{
+  display: flex;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50;
+    transition: transform 0.5s;
+}
+.col-4 img{
+  width: 80%;
+}
+.title{
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px
+  color: #555;
+}
+.title::after{
+  content: '';
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h4{
+  color: #555;
+  font-weight: normal;
+}
+.col-4 p{
+  font-size: 14px;
+}
+.rating .fa{
+  color: #ff523b;
+}
+.col-4:hover{
+  transform: translateY(-5%);
+}
+.button{
+  padding: 8px 16px;
+  background-color: #f1f1f1f1
+  border-radius: 50%;
+  color: #ff523b;
+
+}
+
+/*offer*/
+
+.offer{
+  background: radial-gradient(#fff,#ee4466);
+  margin-top: 80px;
+  padding: 30px 0;  
+}
+.col-2 .offer-img{
+  padding: 50px;
+}
+small{
+  color:  #555;
+}
+
+/*---- button---*/
+
+.button {
+  border: none;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: green; 
+  color: black; 
+  border-radius: 50px;
+}
+
+.button1:hover {
+  background-color: red;
+  color: black;
+}
+
+.button2{
+  background-color: orange;
+  color: black;
+}
+
+.button2:hover{
+  background-color: yellow;
+  color: black;
+}
+
+/*-----testimonial---*/
+
+.col-3{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50;
+    transition: transform 0.5s;
+}
+.col-3:hover{
+  transform: translateY(-5%);
+}
+
+.testimonial{
+  padding-top: 100px;
+}
+.testimonial .col-3{
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+  width: 50px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+.testimonial .col-3:hover{
+  transform: translateY(-10px);
+}
+.fa .fa-quote-left{
+  font-size: 34px;
+  color: #ff523b;
+}
+.col-3 p{
+  font-size: 12px;
+  margin: 12px 0;
+  color: #777;
+}
+.testimonial .col-3 h3{
+  font-weight: 600;
+  color: #555;
+  font-size: 16px;
+}
+
+/*-----footer-----*/
+.footer{
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color: #8a8a8a;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+flex-basis: 12%;
+text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.app-logo{
+  margin-top: 20px;
+}
+.app-logo img{
+  width: 140px;
+}
+.footer hr{
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<br>
+<div class="small-container">
+    <h2 class="title">Bestsellers</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/344/9789381626344.jpg">
+        <h4><b>The Secret Of The Nagas</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/The%20Secret%20Of%20The%20Nagas.bestsellers.html">   Buy Now</a></button>
+      </div>
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/440/9781302907440.jpg">
+        <h4><b>Darth Vader</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Darth%20Vader.bestsellers.html">          Buy Now</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/963/9788192910963.jpg">
+        <h4><b>Power of your Subconscious Mind</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$20.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Power%20of%20your%20Subconscious%20Mind.bestsellers.html">        Buy Now</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/848/9780143428848.jpg">
+        <h4><b>Inner Engineering</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Inner%20engineering.fiction.html">
+          Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/656/9781524731656.jpg">
+        <h4><b>Bad Blood</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Bad%20Blood.bestsellers.html">
+       Buy Now</button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/868/9781492666868.jpg">
+        <h4><b>The Only Woman In The Room</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/The%20Only%20Woman%20In%20The%20Room.bestsellers.html">         Buy Now</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+<div class="small-container">
+    <div class="row">
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/705/9780986164705.jpg">
+        <h4><b>Reflections Of A Man</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Reflections%20Of%20A%20Man.bestsellers.html">         Buy Now</a></button>
+      </div>
+
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/146/9789385152146.jpg">
+        <h4><b>Ram Scion Of Ikshvaku</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Ram%20Scion%20Of%20Ikshvaku.bestsellers.html"> Buy Now</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/951/9781444941951.jpg">
+        <h4><b>Grace & Fury</b></h4>
+        <div class="rating">
+        <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href=" http://mahima.freevar.com/Grace%20&%20Fury.bestsellers.html">Buy Now</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/206/9788193665206.jpg">
+        <h4><b>Your Search For Happiness Ends Here</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Your%20Search%20For%20Happiness%20Ends%20Here.bs.html">
+         Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/566/9788172344566.jpg">
+        <h4><b>The Great Gatsby</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/The%20Great%20Gatsby.bs.html">          Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/959/9789383260959.jpg">
+        <h4><b>Don't Lose Out, Work Out</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Don't%20Lose%20Out,%20Work%20Out.bs.html">      Buy Now</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+<!--------------------------------------------------->
+
+<div class="small-container">
+    <div class="row">
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/570/9780141033570.jpg">
+        <h4><b>Thinking Fast And Slow</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$50.00</b></p><br><br>
+        <button class="button button2"><a href="http://mahima.freevar.com/Thinking%20Fast%20And%20Slow.bs.html">               Buy Now</a></button>
+      </div>
+      <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/638/9781524854638.jpg">
+        <h4><b>Snug</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><b>$30.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Snug.bs.html">        Buy Now</a></button>
+      </div>
+    
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/540/9780062641540.jpg">
+        <h4><b>The Subtle Art Of Not Giving A F*uck</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$20.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/The%20Subtle%20Art%20Of%20Not%20Giving%20A%20Fuck.bs.html">              Buy Now</a></button>
+      </div>
+
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/323/9788179922323.jpg">
+        <h4><b>Who Will Cry When You Die?</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$15.00</b></p><br><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Who%20Will%20Cry%20When%20You%20Die.bs.html">
+            Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/652/9781408855652.jpg">
+        <h4><b>Harry Potter And The Philosopher's Stone</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$10.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/Harry%20Potter%20And%20The%20Philosopher's%20Stone.bs.html">          Buy Now</a></button>
+      </div>
+  
+    <div class="col-4">
+        <img src="https://d2g9wbak88g7ch.cloudfront.net/productimages/mainimages/123/9788179306123.jpg">
+        <h4><b>A brief History Of Modern India</b></h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p><b>$22.00</b></p><br>
+        <button class="button button2"><a href="
+http://mahima.freevar.com/A%20brief%20History%20Of%20Modern%20India.bs.html">         Buy Now</a></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+<!----footer---->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Download Our App</h3>
+        <p>Download App for Android and ios mobile phone</p>
+        <div class="app-logo">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.FO14dLY7C6lzS0fn3S8P8gHaCM&pid=Api&P=0&w=525&h=157">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.1Ft7RF7Gqkeb6d2fK2J8lAHaCM&pid=Api&P=0&w=558&h=166">
+      </div>
+    </div>
+      <div class="footer-col-2">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.8RS1JgScLYPTBDMddhooWAHaF7&pid=Api&P=0&w=232&h=187">
+        <p>Our Purpose Is to Sustainably Make the Pleasure and Benefits of Books Accessible to the many</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Useful Links</h3>
+        <ul>
+          <li>Coupons</li>
+          <li>Blog Post</li>
+          <li>Return Policy</li>
+          <li>Join Affiliate</li>
+        </ul>
+      </div>
+      <div class="footer-col-1">
+        <h3>Follow Us</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+          <li>YouTube</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2021 - Easy Tutorial</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
